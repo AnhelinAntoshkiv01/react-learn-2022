@@ -1,12 +1,14 @@
-import './User.css';
+export const User = ({user, setUser, setUserIdForPosts}) => {
 
-export const User = ({user}) => {
-  return (
-      <div className={user.id % 2 ? 'red': 'green'}>
-          <span>{user.username}</span>
-          <span>{user.email}</span>
-          <span>{user.name}</span>
-          <hr/>
-      </div>
-  )
+    const click = () => {
+      setUserIdForPosts(false);
+      setUser(user);
+    }
+
+    return (
+        <div>
+            {user.name}
+            <input type="button" value="show info" onClick={click}/>
+        </div>
+    )
 }
