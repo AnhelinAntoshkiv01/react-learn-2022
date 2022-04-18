@@ -1,3 +1,3 @@
-export * from './commentsService';
-export * from './postsService';
-export * from './usersService';
+export * from './axios.service';
+export * from './post.service';
+export * from './user.service';
